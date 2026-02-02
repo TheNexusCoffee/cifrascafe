@@ -194,17 +194,11 @@ input[type="date"]:focus {
     margin-bottom: 32px;
     background: #ffffff;
     padding: 24px 32px;
-    border-radius: var(--radius) 0 0 var(--radius) !important;
-    /* Rounded left, flush right */
+    border-radius: var(--radius);
     border: 1px solid #eeeeee;
-    border-right: none !important;
-    /* Remove right border to hit the edge */
-    box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.05);
-    /* Shift shadow left/down */
-    width: calc(100% + 32px) !important;
-    /* Offset the main-content padding */
-    margin-right: -32px !important;
-    /* Pull it to the right edge */
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    /* Standard shadow */
     position: relative;
     z-index: 10;
 }
@@ -717,6 +711,14 @@ input[type="date"]:focus {
         flex-direction: column;
         text-align: center;
         gap: 16px;
+        padding: 20px !important;
+    }
+
+    .app-logo {
+        height: auto;
+        max-height: 80px;
+        /* Limit height on mobile */
+        max-width: 100%;
     }
 
     .header-branding {
