@@ -194,11 +194,12 @@ input[type="date"]:focus {
     margin-bottom: 32px;
     background: #ffffff;
     padding: 24px 32px;
-    border-radius: var(--radius);
+    border-radius: var(--radius) 0 0 var(--radius);
     border: 1px solid #eeeeee;
-    width: 100%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    /* Standard shadow */
+    border-right: none;
+    width: calc(100% + 32px);
+    margin-right: -32px;
+    box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.05);
     position: relative;
     z-index: 10;
 }
@@ -708,6 +709,7 @@ input[type="date"]:focus {
         width: 100% !important;
         margin-right: 0 !important;
         border-radius: var(--radius) !important;
+        border-right: 1px solid #eeeeee !important;
         flex-direction: column;
         text-align: center;
         gap: 16px;
